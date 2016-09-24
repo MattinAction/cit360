@@ -1,6 +1,6 @@
 # cit360
 
-For the course that isn't named Object Oriented Programming II this is where I will
+For this course that isn't named Object Oriented Programming II this is where I will
 place my working files. Once my team and I have completed the documentation portion
 of the course, it will be added in as a folder with the documentation inside.
 
