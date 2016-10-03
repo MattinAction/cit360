@@ -7,7 +7,7 @@ import java.util.*;
 
 
 public class List {
-    public static void main(String[] args){
+    public static void runList(){
         // Happy Path: Basic ArrayList
         // Result: Team member names are added into the array and displayed below
         ArrayList list1 = new ArrayList();
