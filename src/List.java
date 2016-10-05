@@ -39,7 +39,6 @@ public class List {
 
         // Happy Path: iterator()
         // Result: runs through the arraylist using an iterator
-
         Iterator itr = list1.iterator();
 
         System.out.println("Happy Path: iterator()");
@@ -57,5 +56,23 @@ public class List {
         System.out.println("Nasty Path: Adding a different datatype");
         System.out.println("\t" + list1 + "\n");
 
+        // Nasty Path: adding the nextLine character to list
+        // Result: nextLine character acts like it normally would after being added at the back of the list.
+        list1.add("\n");
+        System.out.println("With nextLine character added");
+        System.out.println("\t" + list1 + "\n");
+
+        // Nasty Path: add() null
+        // Result: Null is added as an object
+        list1.add(null);
+        System.out.println("Adding NULL");
+        System.out.println("\t" + list1 + "\n");
+
+        //list.set(non valid index)
+        //list.set(pass different datatype for placement)
+        //list.set(not passing a placement)
+
+        //list.get(getting value that doesn't exist)
+        //list.remove(not in the list)
     }
 }

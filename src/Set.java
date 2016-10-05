@@ -42,7 +42,7 @@ public class Set {
 
             // Happy Path: clear(), isEmpty()
             // Result: hiTreeSet is emptied out and then isEmpty() responds saying the set is empty
-            hiTreeSet.clear();
+            //hiTreeSet.clear();
 
             System.out.println(hiTreeSet);
 
@@ -64,6 +64,41 @@ public class Set {
             System.out.println("W/O Harvey Dent");
             System.out.println(set + "\n");
 
+            // Nasty Path: empty String provided for add()
+            // Result: The empty string is added to the set
+            set.add("");
+            System.out.println("W/ Empty String");
+            System.out.println(set + "\n");
+
+            // Nasty Path: searching for the empty String
+            // Result: The empty string was located in the set
+            testing = set.contains("");
+            System.out.println("The string was found: " + testing + "\n");
+
+            // Nasty Path: add() nextline string command
+            // Result: The element was added, but it causes the displayed result to act as if in println
+            set.add("\n");
+            System.out.println("W/ nextLine command");
+            System.out.println(set + "\n");
+            set.remove("\n");
+
+            // Nasty Path: add() null
+            // Result: Null added to the set CASTING?
+            set.add(null);
+            System.out.println("W/ null");
+            System.out.println(set + "\n");
+
+            // Nasty Path: adding a duplicate element
+            // Result: The duplicate element was replaced
+            set.add("Matt");
+            System.out.println("Duplicate: ");
+            System.out.println(set + "\n");
+
+            // Nasty Path: giving TreeSet null to see where it's located
+            // Result:
+            hiTreeSet.add(null);
+            System.out.println("Duplicate: ");
+            System.out.println(set + "\n");
         }
 
         catch(Exception e){
