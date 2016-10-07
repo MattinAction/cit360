@@ -5,6 +5,8 @@
 public class toRunSandbox {
     public static void main(String args[]){
         //List.runList();
-        Set.runSet();
+        //Set.runSet();
+        //Map.runMap();
+        Tree.runTree();
     }
 }

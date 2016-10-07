@@ -68,11 +68,10 @@ public class List {
         System.out.println("Adding NULL");
         System.out.println("\t" + list1 + "\n");
 
-        //list.set(non valid index)
-        //list.set(pass different datatype for placement)
-        //list.set(not passing a placement)
-
-        //list.get(getting value that doesn't exist)
-        //list.remove(not in the list)
+        // Nasty Path: list.remove(not in the list)
+        // Result: The code functions as if nothing has happened since it didn't exist
+        list1.remove("Dog Crap");
+        System.out.println("Removing an object that's not there");
+        System.out.println("\t" + list1 + "\n");
     }
 }
