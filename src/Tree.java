@@ -62,5 +62,8 @@ public class Tree {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // adding null to treeset
+        // explore comparitors for sorting
     }
 }

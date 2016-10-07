@@ -99,6 +99,9 @@ public class Set {
             hiTreeSet.add(null);
             System.out.println("Duplicate: ");
             System.out.println(set + "\n");
+
+            //Removes nasties
+            // unions, intersections, and inver-intersections new methods and nasty paths
         }
 
         catch(Exception e){

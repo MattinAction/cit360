@@ -73,5 +73,9 @@ public class List {
         list1.remove("Dog Crap");
         System.out.println("Removing an object that's not there");
         System.out.println("\t" + list1 + "\n");
+
+        //set method(index, value)
+        // negative index value
+        // outofbounds
     }
 }

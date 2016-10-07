@@ -49,6 +49,10 @@ public class Map {
         grades.put("Oscar", null);
         System.out.println("Null value = " + grades.get("Oscar") + "\n");
 
+        //Key is null
+        // get(null)
+        // key and value are null
+
     }
 
 }
