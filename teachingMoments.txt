@@ -1,1 +1,4 @@
+10.18.2016 - Showed Landon how to import the QCJSON package into IntelliJ Idea
+10.17.2016 - Worked with Rex to figure out HTTPRequest for Android.
+10.21.2016 - Show Keoni’s group about the HashMap way to create objects from JSON String
 10.26.2016 - Helped Alex set up Java SDK so he could run his code.
