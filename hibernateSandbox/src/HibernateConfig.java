@@ -21,10 +21,11 @@ public class HibernateConfig
 
         //change the next line of code to match your MySQL URL and port
 
-        config.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test");
+        config.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:8889/test");
 
         //change the next two lines of code to match your MySQL user name and password.
-
+        // Added file from Jordan
+        config.setProperty("hibernate.id.new_generator_mappings","false");
         config.setProperty("hibernate.connection.username", "root");
 
         config.setProperty("hibernate.connection.password", "root");

@@ -204,13 +204,11 @@ public class runJSON {
             System.out.println("Nasty Path: Null ");
             System.out.println("\t" + fromJSONString);
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // Nasty Path: Writing to an object that doesn't have write permissions
+        // Nasty Path: Writing to an file that doesn't have write permissions
         // Result: Did not write to the file, but did not throw an error
         File bFile = new File("permTest.json");
         try {
@@ -274,7 +272,51 @@ public class runJSON {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        // Nasty Path: Trying to read a jpg
+        // Result: Unexpected character at position 0 exception
+        File mattPic = new File("mattPic.jpg");
+        try {
+            FileInputStream aFileStream = new FileInputStream(mattPic);
+            JSONInputStream objectIn = new JSONInputStream(aFileStream);
+            HashMap newStudent = ((HashMap) objectIn.readObject());
+            studentsDemo newStudent1 = new studentsDemo(newStudent);
+            objectIn.close();
+
+            System.out.println("From picture: ");
+            System.out.println("\t" + newStudent1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // Nasty Path: Reading for more objects than have been written
+        // Result: Unexpected token END OF FILE.
+        try{
+            // Writing three objects to the file
+            FileOutputStream aFileStream = new FileOutputStream(aFile);
+            JSONOutputStream jsonOut = new JSONOutputStream(aFileStream);
+            jsonOut.writeObject(student1);
+            jsonOut.writeObject(student2);
+            jsonOut.writeObject(student3);
+            jsonOut.close();
+            System.out.println("Writing process complete!");
+
+            // Reading 4 objects from the file
+            FileInputStream aFileIPStream = new FileInputStream(aFile);
+            JSONInputStream objectIn = new JSONInputStream(aFileIPStream);
+            HashMap newStudent1 = ((HashMap) objectIn.readObject());
+            HashMap newStudent2 = ((HashMap) objectIn.readObject());
+            HashMap newStudent3 = ((HashMap) objectIn.readObject());
+            HashMap newStudent4 = ((HashMap) objectIn.readObject());
+            objectIn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
+
+
+
 }
 
 class studentsDemo implements Serializable{
