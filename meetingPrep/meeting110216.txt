@@ -1,0 +1,10 @@
+02 November 2016
+Subjects to be Passed Off:
+   - Java Collections
+   - JSON and QCJSON
+
+On Schedule:
+   - Yes, even though we have had to reschedule
+
+Metacognitive thinking:
+   - “If we both think the same, one of us is unnecessary”. Talk about working with Jordan and how he’s able to pull out different ways of thinking that allowed for us to tackle Hibernate.
