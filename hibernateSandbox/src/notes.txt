@@ -1,0 +1,14 @@
+/** Hibernate notes:
+ * The easiest way to communicate with a database
+ *
+ * Use @ symbol to start off the query
+ * @entity
+ * @table (name: "table_name")
+ * @id
+ * @generatedValue
+ * these will trigger it to act on a line of code
+ *
+ * @manytomany
+ * @jointable
+ *
+*/

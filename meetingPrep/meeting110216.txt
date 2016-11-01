@@ -2,6 +2,7 @@
 Subjects to be Passed Off:
    - Java Collections
    - JSON and QCJSON
+   - Threads, Runnables, and Executors
 
 On Schedule:
    - Yes, even though we have had to reschedule
